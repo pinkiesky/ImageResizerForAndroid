@@ -21,7 +21,7 @@ public class CustomImageIO {
                 System.out.println(densityFolder.getAbsolutePath() + " " + densityFolder.mkdirs());
                 
                 for (ImageContainer imageContainer : imageList) {
-                    BufferedImage image = imageContainer.getImage();
+                    BufferedImage image  = imageContainer.getImage();
                     
                     Dimension scaleDimension = Densities.getScaleDimension(baseline, density, new Dimension(image.getWidth(), image.getHeight()));
                     BufferedImage resize = Scalr.resize(image, scaleDimension.width, scaleDimension.height);
